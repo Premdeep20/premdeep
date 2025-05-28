@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premdeep Singh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --accent: #2563eb;
+      --section-bg: #ffffff;
+    }
+    [data-theme="dark"] {
+      --bg: #111827;
+      --text: #f9fafb;
+      --accent: #3b82f6;
+      --section-bg: #1f2937;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      color: white;
+      padding: 40px 20px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 20px;
+    }
+    .typed-text {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      min-height: 1.5em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: var(--section-bg);
+      padding: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      background-color: var(--section-bg);
+      transition: background-color 0.3s;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .tag {
+      display: inline-block;
+      background-color: #dbeafe;
+      color: #1e3a8a;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      margin: 4px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .highlight {
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      background-color: #1f2937;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <img src="profile.jpg" alt="Premdeep Singh" class="profile-pic">
+    <h1>Premdeep Singh</h1>
+    <div class="typed-text" id="typed"></div>
+    <p><a href="mailto:premdeep17@gmail.com" style="color:white;">premdeep17@gmail.com</a> | +91 7696520318 | Jamshedpur, India</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#awards">Awards</a>
+    <a href="#certs">Certificates</a>
+    <a href="#interests">Interests</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Self-motivated and detail-oriented Software Developer with 5+ years experience in building responsive, scalable web applications using React.js, Next.js, and TypeScript.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <span class="tag">React</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">Redux</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Bootstrap</span>
+      <span class="tag">Git</span>
+      <span class="tag">GraphQL</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><span class="highlight">UI - 2 Developer, Acko</span> (2022 - Present)</li>
+      <li><span class="highlight">Senior Software Engineer, Byju's</span> (2021 - 2022)</li>
+      <li><span class="highlight">Software Engineer, Byju's</span> (2021)</li>
+      <li><span class="highlight">MTS III, Nineleaps</span> (2020 - 2021)</li>
+      <li><span class="highlight">MTS II, Nineleaps</span> (2019 - 2020)</li>
+      <li><span class="highlight">Intern, Nineleaps</span> (2018 - 2019)</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Computer Science</strong> – Lovely Professional University (2015 - 2019)</p>
+  </section>
+
+  <section id="awards">
+    <h2>Awards</h2>
+    <ul>
+      <li>Ackcel Awards – Acko (Mar 2020, Sep 2023, Apr 2024)</li>
+      <li>Feather on the Hat – Nineleaps (May 2020, Oct 2020)</li>
+    </ul>
+  </section>
+
+  <section id="certs">
+    <h2>Certificates</h2>
+    <ul>
+      <li>GATE 2019 – Rank 8474</li>
+      <li>Core Java with Android – 2017</li>
+    </ul>
+  </section>
+
+  <section id="interests">
+    <h2>Languages & Interests</h2>
+    <p><strong>Languages:</strong> English, Hindi, Punjabi</p>
+    <p><strong>Interests:</strong> Coding, Chess, Teaching, Aptitude</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me directly by filling out the form below:</p>
+    <form action="https://formspree.io/f/xzbldlnn" method="POST" style="margin-top: 20px;">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required style="width:100%;padding:10px;margin:10px 0;"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required style="width:100%;padding:10px;margin:10px 0;"><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px;margin:10px 0;"></textarea><br>
+      <button type="submit" style="background:var(--accent);color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Send Message</button>
+    </form>
+    <div style="margin-top:40px;">
+      <h3>Find me here:</h3>
+      <p>Email: <a href="mailto:premdeep17@gmail.com">premdeep17@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917696520318">+91 7696520318</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/premdeep-singh-32a9b859" target="_blank">linkedin.com/in/premdeep-singh-32a9b859</a></p>
+      <div style="margin-top:20px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.6397458753283!2d86.19238557534707!3d23.112186814118522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e1a87d6715df%3A0xd9bbd4e95114f148!2sJamshedpur%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1716888800000!5m2!1sen!2sin" 
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Premdeep Singh | Portfolio built with 💙
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
+
+    const typedText = document.getElementById("typed");
+    const phrases = ["Software Developer", "React.js Enthusiast", "Next.js Specialist", "Frontend Mentor"];
+    let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+
+    function loop() {
+      typedText.innerHTML = currentPhrase.join("");
+      if (!isDeleting && j <= phrases[i].length) {
+        currentPhrase.push(phrases[i][j]);
+        j++;
+      }
+      if (isDeleting && j <= phrases[i].length) {
+        currentPhrase.pop();
+        j--;
+      }
+      if (j === phrases[i].length) isDeleting = true;
+      if (isDeleting && j === 0) {
+        currentPhrase = [];
+        isDeleting = false;
+        i = (i + 1) % phrases.length;
+      }
+      setTimeout(loop, isDeleting ? 50 : 100);
+    }
+    loop();
+  </script>
+</body>
+</html>
